@@ -1,4 +1,4 @@
-# Use a Node.js base image
+# Use Node.js base image
 FROM node:14
 
 # Create app directory
@@ -8,11 +8,11 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install --only=production
 
-# Bundle app source
+# Copy app source
 COPY . .
 
-# Expose frontend port
-EXPOSE 3000
+# Expose backend port
+EXPOSE 5000
 
-# Start the frontend application
+# Start backend application
 CMD [ "npm", "start" ]
