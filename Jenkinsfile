@@ -49,7 +49,7 @@ pipeline {
     post {
         always {
         //     // Clean up Docker containers and images after each run
-        //     sh 'docker-compose down --rmi all'
+            sh 'docker-compose down --rmi all'
         }
     }
 }
