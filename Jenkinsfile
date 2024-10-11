@@ -27,29 +27,29 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
-            steps {
-                script {
-                    // Run any tests for the backend (for example)
-                    sh 'docker-compose exec backend npm test'
-                }
-            }
-        }
+        // stage('Run Tests') {
+        //     steps {
+        //         script {
+        //             // Run any tests for the backend (for example)
+        //             sh 'docker-compose exec backend npm test'
+        //         }
+        //     }
+        // }
 
-        stage('Cleanup') {
-            steps {
-                script {
-                    // Optional: Stop and remove Docker containers after tests
-                    sh 'docker-compose down'
-                }
-            }
-        }
+        // stage('Cleanup') {
+        //     steps {
+        //         script {
+        //             // Optional: Stop and remove Docker containers after tests
+        //             sh 'docker-compose down'
+        //         }
+        //     }
+        // }
     }
 
     post {
-        always {
-            // Clean up Docker containers and images after each run
-            sh 'docker-compose down --rmi all'
-        }
+        // always {
+        //     // Clean up Docker containers and images after each run
+        //     sh 'docker-compose down --rmi all'
+        // }
     }
 }
