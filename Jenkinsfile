@@ -36,14 +36,14 @@ pipeline {
             }
         }
 
-        stage('Cleanup') {
-            steps {
-                script {
-                    // Optional: Stop and remove Docker containers after tests
-                    sh 'docker-compose down'
-                }
-            }
-        }
+        // stage('Cleanup') {
+        //     steps {
+        //         script {
+        //             // Optional: Stop and remove Docker containers after tests
+        //             sh 'docker-compose down'
+        //         }
+        //     }
+        // }
     }
 
     post {
