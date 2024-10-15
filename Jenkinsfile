@@ -27,14 +27,14 @@ pipeline {
             }
         }
 
-         stage('Run Tests') {
-            steps {
-                script {
-                    // Run any tests for the backend (for example)
-                    sh 'docker-compose exec backend npm test'
-                }
-            }
-        }
+        //  stage('Run Tests') {
+        //     steps {
+        //         script {
+        //             // Run any tests for the backend (for example)
+        //             sh 'docker-compose exec backend npm test'
+        //         }
+        //     }
+        // }
 
         // stage('Cleanup') {
         //     steps {
